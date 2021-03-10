@@ -7,6 +7,7 @@ import { RSSoknadstatus } from '../../types/rs-types/rs-soknadstatus'
 import { RSSoknadstype } from '../../types/rs-types/rs-soknadstype'
 import env from '../../utils/environment'
 import { jsonDeepCopy } from '../../utils/json-deep-copy'
+import { reisetilskuddene } from './data/reisetilskudd'
 import {
     arbeidstakerDeltPeriodeForsteUtenforArbeidsgiverperiodeKvittering,
     arbeidstakerInnenforArbeidsgiverperiodeKvittering,
@@ -31,6 +32,7 @@ const mock = FetchMock.configure({
 const soknader = [ ...jsonDeepCopy(soknaderOpplaering) ]
 if (!env.isOpplaering) {
     soknader.push(...jsonDeepCopy(soknaderIntegration))
+    soknader.push(...jsonDeepCopy(reisetilskuddene))
 }
 
 mock.put(`${env.flexGatewayRoot}/syfosoknad/api/soknader/:soknad/sporsmal/:sporsmal`,

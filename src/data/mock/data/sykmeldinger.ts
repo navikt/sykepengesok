@@ -1,5 +1,6 @@
 import { Sykmelding } from '../../../types/types'
 
+// Sykepengesøknad
 export const frilanserSm: Sykmelding = {
     'id': 'baf4a9ab-cc9b-42af-bba3-67cd6ca06388',
     'startLegemeldtFravaer': '2020-04-01',
@@ -911,6 +912,134 @@ export const selvstendingSm: Sykmelding = {
     },
     'sendtdato': '2020-06-23T16:07:06.427'
 }
+
+// Reisetilskudd
+export const arbeidstakerReisetilskudd: Sykmelding = {
+    'id': '83b6edca-691d-4dd9-9825-31df356bb951',
+    'startLegemeldtFravaer': '2021-02-01',
+    'skalViseSkravertFelt': true,
+    'identdato': '2021-02-01',
+    'status': 'BEKREFTET',
+    'naermesteLederStatus': null,
+    'erEgenmeldt': false,
+    'erPapirsykmelding': false,
+    'innsendtArbeidsgivernavn': null,
+    'valgtArbeidssituasjon': 'ARBEIDSTAKER',
+    'mottakendeArbeidsgiver': null,
+    'orgnummer': null,
+    'sendtdato': '2021-03-09T16:14:31',
+    'sporsmal': {
+        'arbeidssituasjon': 'ARBEIDSTAKER',
+        'harForsikring': null,
+        'fravaersperioder': [],
+        'harAnnetFravaer': null
+    },
+    'pasient': {
+        'fnr': '23047824435',
+        'fornavn': 'LITEN',
+        'mellomnavn': null,
+        'etternavn': 'HØYSTAKK'
+    },
+    'arbeidsgiver': 'LOMMEN BARNEHAVE',
+    'stillingsprosent': 100,
+    'diagnose': {
+        'hoveddiagnose': {
+            'diagnose': 'TENDINITT INA',
+            'diagnosekode': 'L87',
+            'diagnosesystem': 'ICPC-2'
+        },
+        'bidiagnoser': [
+            {
+                'diagnose': 'GANGLION SENE',
+                'diagnosekode': 'L87',
+                'diagnosesystem': 'ICPC-2'
+            }
+        ],
+        'fravaersgrunnLovfestet': null,
+        'fravaerBeskrivelse': null,
+        'svangerskap': false,
+        'yrkesskade': false,
+        'yrkesskadeDato': '2021-02-01'
+    },
+    'mulighetForArbeid': {
+        'perioder': [
+            {
+                'fom': '2021-02-01',
+                'tom': '2021-02-24',
+                'grad': null,
+                'behandlingsdager': null,
+                'reisetilskudd': true,
+                'avventende': null,
+                'redusertVenteperiode': null
+            }
+        ],
+        'aktivitetIkkeMulig433': [],
+        'aktivitetIkkeMulig434': [],
+        'aarsakAktivitetIkkeMulig433': null,
+        'aarsakAktivitetIkkeMulig434': null
+    },
+    'friskmelding': {
+        'arbeidsfoerEtterPerioden': true,
+        'hensynPaaArbeidsplassen': 'Må ta det pent',
+        'antarReturSammeArbeidsgiver': true,
+        'antattDatoReturSammeArbeidsgiver': '2021-02-01',
+        'antarReturAnnenArbeidsgiver': true,
+        'tilbakemeldingReturArbeid': '2021-02-01',
+        'utenArbeidsgiverAntarTilbakeIArbeid': false,
+        'utenArbeidsgiverAntarTilbakeIArbeidDato': null,
+        'utenArbeidsgiverTilbakemelding': null
+    },
+    'utdypendeOpplysninger': {
+        'sykehistorie': 'Langvarig korsryggsmerter. Ømhet og smerte',
+        'paavirkningArbeidsevne': 'Kan ikke utføre arbeidsoppgaver 100% som kreves fra yrket. Duplikatbuster: c043e59d-24ef-45dd-92e8-5bb07fd017a1',
+        'resultatAvBehandling': 'Nei',
+        'henvisningUtredningBehandling': 'Henvist til fysio',
+        'grupper': [
+            {
+                'id': '6.2',
+                'sporsmal': [
+                    {
+                        'id': '6.2.1',
+                        'svar': 'Langvarig korsryggsmerter. Ømhet og smerte'
+                    },
+                    {
+                        'id': '6.2.2',
+                        'svar': 'Kan ikke utføre arbeidsoppgaver 100% som kreves fra yrket. Duplikatbuster: c043e59d-24ef-45dd-92e8-5bb07fd017a1'
+                    },
+                    {
+                        'id': '6.2.3',
+                        'svar': 'Nei'
+                    },
+                    {
+                        'id': '6.2.4',
+                        'svar': 'Henvist til fysio'
+                    }
+                ]
+            }
+        ]
+    },
+    'arbeidsevne': {
+        'tilretteleggingArbeidsplass': 'Fortsett som sist.',
+        'tiltakNAV': 'Pasienten har plager som er kommet tilbake etter operasjon. Det er nylig tatt MR bildet som viser forandringer i hånd som mulig må opereres. Venter på time. Det er mulig sykemledingen vil vare utover aktuell sm periode. ',
+        'tiltakAndre': null
+    },
+    'meldingTilNav': {
+        'navBoerTaTakISaken': false,
+        'navBoerTaTakISakenBegrunnelse': null
+    },
+    'innspillTilArbeidsgiver': null,
+    'tilbakedatering': {
+        'dokumenterbarPasientkontakt': null,
+        'tilbakedatertBegrunnelse': null
+    },
+    'bekreftelse': {
+        'utstedelsesdato': '2021-01-31',
+        'sykmelder': 'Frida Perma Frost',
+        'sykmelderTlf': '94431152'
+    }
+}
+
+// Integrasjonstester
 export const syk1: Sykmelding = {
     'id': 'syk1',
     'startLegemeldtFravaer': '2020-01-01',
@@ -1845,6 +1974,7 @@ export const sykmeldinger: Sykmelding[] = [
     arbeidsledigSm,
     arbeidsledigKvitteringSm,
     selvstendingSm,
+    arbeidstakerReisetilskudd,
     syk1,
     syk2,
     syk3,

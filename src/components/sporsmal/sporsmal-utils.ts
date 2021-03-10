@@ -81,6 +81,8 @@ export const hentGeneriskFeilmelding = (svartype: RSSvartype) => {
         }
         case RSSvartype.PROSENT:
         case RSSvartype.TIMER:
+        case RSSvartype.BELOP:
+        case RSSvartype.KILOMETER:
         case RSSvartype.TALL: {
             return 'Du må oppgi en verdi'
         }
@@ -89,6 +91,7 @@ export const hentGeneriskFeilmelding = (svartype: RSSvartype) => {
             return 'Du må oppgi en periode'
         }
         case RSSvartype.BEHANDLINGSDAGER:
+        case RSSvartype.DATOER:
         case RSSvartype.RADIO_GRUPPE_UKEKALENDER: {
             return 'Du må oppgi en dag'
         }
@@ -101,6 +104,7 @@ export const hentGeneriskFeilmelding = (svartype: RSSvartype) => {
         case RSSvartype.DATO: {
             return 'Du må oppgi en dato'
         }
+        case RSSvartype.KVITTERING:
         case RSSvartype.IKKE_RELEVANT:
         case RSSvartype.INFO_BEHANDLINGSDAGER: {
             return ''

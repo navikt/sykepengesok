@@ -116,6 +116,20 @@ const SporsmalTekster = {
     'soknad.feilmelding.ENKELTSTAENDE_BEHANDLINGSDAGER_UKE': 'Du må oppgi hvilke dager du var til behandling',
     'soknad.feilmelding.ENKELTSTAENDE_BEHANDLINGSDAGER_DAG_NAR': 'Du må oppgi hvilke dager du var til behandling',
 
+    // TODO: Sett opp disse feilmeldingene
+    'soknad.feilmelding.TRANSPORT_TIL_DAGLIG': 'TODO',
+    'soknad.feilmelding.TYPE_TRANSPORT': 'TODO',
+    'soknad.feilmelding.BIL_TIL_DAGLIG': 'TODO',
+    'soknad.feilmelding.KM_HJEM_JOBB': 'TODO',
+    'soknad.feilmelding.OFFENTLIG_TRANSPORT_TIL_DAGLIG': 'TODO',
+    'soknad.feilmelding.OFFENTLIG_TRANSPORT_BELOP': 'TODO',
+    'soknad.feilmelding.REISE_MED_BIL': 'TODO',
+    'soknad.feilmelding.BIL_DATOER': 'TODO',
+    'soknad.feilmelding.BIL_BOMPENGER': 'TODO',
+    'soknad.feilmelding.BIL_BOMPENGER_BELOP': 'TODO',
+    'soknad.feilmelding.KVITTERINGER': 'TODO',
+    'soknad.feilmelding.UTBETALING': 'TODO',
+
     'soknad.hjelpetekst.FERIE_V2': 'Blir du trukket i antall feriedager, er det ferie. Du får ikke sykepenger for disse dagene.',
     'soknad.hjelpetekst.FERIE_NAR': 'Du må oppgi hvilke dager du hadde ferie',
     'soknad.hjelpetekst.FERIE_NAR_V2': 'Du må oppgi hvilke dager du hadde ferie',
