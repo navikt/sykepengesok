@@ -40,8 +40,8 @@ describe('Tester arbeidstakersøknad', () => {
 
         // Avbryt dialog vises
         cy.contains('Jeg ønsker ikke å bruke denne søknaden').click()
-        cy.get('.avbrytDialog__dialog button.lenke:contains(Angre)').click()
-        cy.get('.avbrytDialog__dialog button.lenke:contains(Angre)').should('not.be.visible')
+        // cy.get('.avbrytDialog__dialog button.lenke:contains(Angre)').click()
+        // cy.get('.avbrytDialog__dialog button.lenke:contains(Angre)').should('not.be.visible')
 
         // Må godkjenne ANSVARSERKLARING først
         cy.contains('Gå videre').click()
