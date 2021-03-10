@@ -1,4 +1,4 @@
-import { EtikettLiten, Normaltekst } from 'nav-frontend-typografi'
+import { Normaltekst, UndertekstBold } from 'nav-frontend-typografi'
 import React from 'react'
 
 import { useAppStore } from '../../data/stores/app-store'
@@ -10,9 +10,9 @@ const ArbeidsgiverInfo = () => {
     if (valgtSykmelding?.mottakendeArbeidsgiver?.navn) {
         return (
             <div className="avsnitt">
-                <EtikettLiten tag="h3" className="avsnitt-hode">
+                <UndertekstBold tag="h3" className="avsnitt-hode">
                     {tekst('sykepengesoknad.sykmelding-utdrag.arbeidsgiver')}
-                </EtikettLiten>
+                </UndertekstBold>
                 <Normaltekst>{valgtSykmelding.mottakendeArbeidsgiver.navn}</Normaltekst>
             </div>
         )

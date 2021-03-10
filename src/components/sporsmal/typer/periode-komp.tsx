@@ -71,9 +71,9 @@ const PeriodeKomp = ({ sporsmal, index, slettPeriode }: AllProps) => {
                                 const validert = validerFom(sporsmal, id, getValues())
                                 const div: HTMLElement | null = document.getElementById(id + '_fom')
                                 if (validert !== true) {
-                                div?.classList.add('skjemaelement__input--harFeil')
+                                    div?.classList.add('skjemaelement__input--harFeil')
                                 } else {
-                                div?.classList.remove('skjemaelement__input--harFeil')
+                                    div?.classList.remove('skjemaelement__input--harFeil')
                                 }
                                 return validert
                             },
@@ -81,9 +81,9 @@ const PeriodeKomp = ({ sporsmal, index, slettPeriode }: AllProps) => {
                                 const validert = validerTom(sporsmal, id, getValues())
                                 const div: HTMLElement | null = document.getElementById(id + '_tom')
                                 if (validert !== true) {
-                                div?.classList.add('skjemaelement__input--harFeil')
+                                    div?.classList.add('skjemaelement__input--harFeil')
                                 } else {
-                                div?.classList.remove('skjemaelement__input--harFeil')
+                                    div?.classList.remove('skjemaelement__input--harFeil')
                                 }
                                 return validert
                             },
@@ -91,9 +91,9 @@ const PeriodeKomp = ({ sporsmal, index, slettPeriode }: AllProps) => {
                                 const validert = validerPeriode(sporsmal, id, getValues())
                                 const div: HTMLElement | null = document.getElementById(id + '_fom')
                                 if (validert !== true) {
-                                div?.classList.add('skjemaelement__input--harFeil')
+                                    div?.classList.add('skjemaelement__input--harFeil')
                                 } else {
-                                div?.classList.remove('skjemaelement__input--harFeil')
+                                    div?.classList.remove('skjemaelement__input--harFeil')
                                 }
                                 return validert
                             }

@@ -1,7 +1,7 @@
 import './statuspanel.less'
 
 import { Knapp } from 'nav-frontend-knapper'
-import { EtikettLiten, Normaltekst } from 'nav-frontend-typografi'
+import { Normaltekst, UndertekstBold } from 'nav-frontend-typografi'
 import React, { useEffect, useState } from 'react'
 import { useHistory, useParams } from 'react-router'
 
@@ -80,11 +80,13 @@ const StatusPanel = () => {
         <div className={'statuspanel'}>
             <div className={'content'}>
                 <div className="avsnitt">
-                    <EtikettLiten tag="h3" className="avsnitt-hode">{tekst('statuspanel.status')}</EtikettLiten>
+                    <UndertekstBold tag="h3" className="avsnitt-hode">
+                        {tekst('statuspanel.status')}
+                    </UndertekstBold>
                     <Normaltekst>{tekst('sykepengesoknad.status.AVBRUTT')}</Normaltekst>
                 </div>
                 <div className="avsnitt">
-                    <EtikettLiten tag="h3" className="avsnitt-hode">{'Dato avbrutt'}</EtikettLiten>
+                    <UndertekstBold tag="h3" className="avsnitt-hode">{'Dato avbrutt'}</UndertekstBold>
                     <Normaltekst>{tilLesbarDatoMedArstall(valgtSoknad!.avbruttDato)}</Normaltekst>
                 </div>
             </div>
@@ -95,7 +97,6 @@ const StatusPanel = () => {
             </Vis>
         </div>
     )
-
 }
 
 export default StatusPanel

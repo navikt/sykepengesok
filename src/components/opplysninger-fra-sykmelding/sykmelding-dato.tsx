@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import { EtikettLiten, Normaltekst } from 'nav-frontend-typografi'
+import { Normaltekst, UndertekstBold } from 'nav-frontend-typografi'
 import React from 'react'
 
 import { useAppStore } from '../../data/stores/app-store'
@@ -14,7 +14,9 @@ const SykmeldingDato = () => {
 
     return (
         <div className="avsnitt">
-            <EtikettLiten tag="h3" className="avsnitt-hode">{tekst('sykepengesoknad.sykmelding-utdrag.dato-sykmeldingen-ble-skrevet')}</EtikettLiten>
+            <UndertekstBold tag="h3" className="avsnitt-hode">
+                {tekst('sykepengesoknad.sykmelding-utdrag.dato-sykmeldingen-ble-skrevet')}
+            </UndertekstBold>
             <Normaltekst>{dayjs(valgtSykmelding.bekreftelse.utstedelsesdato).format('D. MMM YYYY')}</Normaltekst>
         </div>
     )

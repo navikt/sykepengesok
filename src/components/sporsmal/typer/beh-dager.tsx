@@ -30,10 +30,10 @@ const BehDager = ({ sporsmal }: SpmProps) => {
         })
         setLokal(lokal)
         // eslint-disable-next-line
-    }, [sporsmal]);
+    }, [ sporsmal ]);
 
     const dagerSidenMandag = (spm: Sporsmal) => {
-        return (( dayjs(spm.min!).day() - 1)) % 7
+        return ((dayjs(spm.min!).day() - 1)) % 7
     }
 
     const dagerTilFredag = (spm: Sporsmal) => {

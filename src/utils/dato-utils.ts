@@ -39,7 +39,7 @@ export const fraBackendTilDate = (datoArg: string) => {
 
 export const tilLesbarDatoUtenAarstall = (datoArg: any): string => {
     if (datoArg) {
-        const dato =  dayjsToDate(datoArg)!
+        const dato = dayjsToDate(datoArg)!
         const dag = dato.getDate()
         const manedIndex = dato.getMonth()
         const maned = maaneder[manedIndex]

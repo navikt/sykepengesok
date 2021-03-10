@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import { EtikettLiten, Normaltekst } from 'nav-frontend-typografi'
+import { Normaltekst, UndertekstBold } from 'nav-frontend-typografi'
 import React from 'react'
 
 import { useAppStore } from '../../data/stores/app-store'
@@ -27,14 +27,17 @@ const SykmeldingPerioder = () => {
 
                 return (
                     <div className="avsnitt" key={index}>
-                        <EtikettLiten tag="h3"
-                            className="avsnitt-hode">{tekst('din-sykmelding.periode.tittel')}</EtikettLiten>
+                        <UndertekstBold tag="h3" className="avsnitt-hode">
+                            {tekst('din-sykmelding.periode.tittel')}
+                        </UndertekstBold>
                         <Normaltekst><strong>{fom} - {tom}</strong> &bull; {dager}</Normaltekst>
+
                         <Vis hvis={periode.grad}>
                             <Normaltekst>
                                 {periode.grad} {tekst('din-sykmelding.periode.prosent-sykmeldt')}
                             </Normaltekst>
                         </Vis>
+
                         <Vis hvis={periode.behandlingsdager}>
                             <Normaltekst>
                                 <Vis hvis={periode.behandlingsdager! > 1}>

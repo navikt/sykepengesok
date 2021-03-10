@@ -20,13 +20,10 @@ interface EttersendingProps {
 const Ettersending = ({ gjelder, setRerendrekvittering }: EttersendingProps) => {
     const { valgtSoknad, setValgtSoknad, soknader, setSoknader, setFeilmeldingTekst } = useAppStore()
     const [ vilEttersende, setVilEttersende ] = useState<boolean>(false)
-
     const [ ettersender, setEttersender ] = useState<boolean>(false)
-
 
     const hentTekst = (text: string) => {
         const tilSuffix = (gjelder === 'nav') ? '-nav' : '-arbeidsgiver'
-
         return tekst(`${text}${tilSuffix}` as any)
     }
 
@@ -54,13 +51,12 @@ const Ettersending = ({ gjelder, setRerendrekvittering }: EttersendingProps) => 
     }
 
     const ettersendNav = async() => {
-
-
         const res = await fetcher(env.flexGatewayRoot + `/syfosoknad/api/soknader/${valgtSoknad!.id}/ettersendTilNav`, {
             method: 'POST',
             credentials: 'include',
             headers: { 'Content-Type': 'application/json' }
         })
+
         if (redirectTilLoginHvis401(res)) {
             return
         } else if (res.ok) {
@@ -70,11 +66,9 @@ const Ettersending = ({ gjelder, setRerendrekvittering }: EttersendingProps) => 
             logger.error('Feil ved ettersending til NAV', res)
             setFeilmeldingTekst(tekst('kvittering.ettersending.feilet'))
         }
-
     }
 
     const ettersendArbeidsgiver = async() => {
-
         const res = await fetcher(env.flexGatewayRoot + `/syfosoknad/api/soknader/${valgtSoknad!.id}/ettersendTilArbeidsgiver`, {
             method: 'POST',
             credentials: 'include',
