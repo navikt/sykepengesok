@@ -1,0 +1,92 @@
+@import 'node_modules/nav-frontend-core/less/_variabler';
+
+.soknad-intro {
+    margin: 2rem 0;
+
+    .nav-veileder__frame svg, .nav-veileder__frame img {
+        height: 100%;
+    }
+
+    .nav-veilederpanel__content {
+        p:first-child {
+            margin-top: 0;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .no-border {
+        border: none;
+    }
+}
+
+
+.personvern-modal {
+    max-width: 700px;
+    section {
+        padding: 1em
+    }
+    h3{
+        padding-bottom: 1em;
+    }
+    ul {
+        margin: 0;
+        padding-left: 1em;
+        padding-bottom: 1em;
+    }
+    li {
+        padding-top: 1em;
+    }
+
+
+    .no-border {
+        border: none;
+    }
+
+    .lukk-wrapper {
+        padding-top: 1.5em;
+        text-align: center;
+    }
+
+    .hvem-kan-faa {
+        margin: 1rem 0;
+    }
+
+    .hvem-kan-faa {
+        ul {
+            padding-left: 1.4rem;
+            margin: 1rem 0;
+            line-height: 1.5;
+        }
+
+        p {
+            margin: 0.5rem 0 1rem;
+        }
+    }
+
+    .spar-tid {
+        margin: 0 0 1rem;
+
+        .nav-veilederpanel {
+            border: 0;
+
+            .nav-veileder__frame {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: @navLysBlaLighten60;
+
+                svg {
+                    width: 65%;
+                    height: 65%;
+                }
+
+                img {
+                    width: 90%;
+                    height: 90%;
+                }
+            }
+        }
+    }
+}

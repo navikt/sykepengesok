@@ -8,7 +8,7 @@ describe('Tester gjenoppretting av søknad', () => {
     })
 
     it('Laster startside', function() {
-        cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader om sykepenger')
+        cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader')
     })
 
     it('Avbrutt søknad har forventa tekst', function() {
@@ -42,7 +42,7 @@ describe('Tester gjenoppretting av søknad', () => {
         // Avbryt dialog vises
         cy.contains('Jeg ønsker ikke å bruke denne søknaden').click()
         cy.get('.avbrytDialog__dialog button.lenke:contains(Angre)').click()
-        cy.get('.avbrytDialog__dialog button.lenke:contains(Angre)').should('not.be.visible')
+        cy.get('.avbrytDialog__dialog button.lenke:contains(Angre)').should('not.exist')
 
         cy.contains('Jeg ønsker ikke å bruke denne søknaden').click()
         cy.get('button.knapp.knapp--fare:contains(Ja, jeg er sikker)').click()

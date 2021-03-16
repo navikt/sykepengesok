@@ -16,7 +16,8 @@ const TeaserTekster = {
     'soknad.teaser.sykmeldt-fra': '%GRAD%% sykmeldt fra %ARBEIDSGIVER%',
     'soknad.teaser.sykmeldt-behandlingsdager-fra': 'Sykmeldt fra %ARBEIDSGIVER%',
     'soknad.teaser.utgaatt.popup.header': 'Søknaden er utgått',
-    'soknad.teaser.utgaatt.popup.innhold': 'Du får ikke åpnet denne søknaden fordi du ikke har sendt den innen fristen.'
+    'soknad.teaser.utgaatt.popup.innhold': 'Du får ikke åpnet denne søknaden fordi du ikke har sendt den innen fristen.',
+    'soknad.reisetilskudd.teaser.tittel': 'Søknad om reisetilskudd',
 
 
 }

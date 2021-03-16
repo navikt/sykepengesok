@@ -4,7 +4,6 @@ import React from 'react'
 
 import { RSSoknadstype } from '../../../types/rs-types/rs-soknadstype'
 import { tilLesbarPeriodeMedArstall } from '../../../utils/dato-utils'
-import { tekst } from '../../../utils/tekster'
 import { getUrlTilSoknad } from '../../../utils/url-utils'
 import { useAmplitudeInstance } from '../../amplitude/amplitude'
 import Vis from '../../vis'
@@ -14,7 +13,7 @@ import {
     hentIkonHover,
     hentTeaserStatustekst,
     periodeListevisning,
-    SykepengesoknadTeaserProps
+    SykepengesoknadTeaserProps, teaserTittel
 } from './teaser-util'
 
 const TidligereSoknaderTeaser = ({ soknad }: SykepengesoknadTeaserProps) => {
@@ -38,9 +37,7 @@ const TidligereSoknaderTeaser = ({ soknad }: SykepengesoknadTeaserProps) => {
                                 </Undertekst>
                             </Vis>
                             <Undertittel tag="h3" className="inngangspanel__tittel">
-                                {soknad.soknadstype === RSSoknadstype.OPPHOLD_UTLAND
-                                    ? tekst('soknad.utland.teaser.tittel')
-                                    : tekst('soknad.teaser.tittel')}
+                                {teaserTittel(soknad)}
                             </Undertittel>
                             {periodeListevisning(soknad)}
                         </div>

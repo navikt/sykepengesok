@@ -20,7 +20,7 @@ describe('Tester kvittering', () => {
     afterEach(() => {
         cy.get('.brodsmuler__smuler').then(smuler => {
             if (smuler.find('.smule .lenke').length > 0) {
-                cy.contains('Søknader om sykepenger').click({ force: true })
+                cy.contains('Søknader').click({ force: true })
             }
         })
     })

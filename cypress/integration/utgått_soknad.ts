@@ -2,13 +2,12 @@ import { utgattSoknad } from '../../src/data/mock/data/soknader-integration'
 
 describe('Tester sendt søknad', () => {
 
-
     before(() => {
         cy.visit('http://localhost:8080')
     })
 
     it('Laster startside', function() {
-        cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader om sykepenger')
+        cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader')
     })
 
     it('Utgått søknad har forventa tekst', function() {

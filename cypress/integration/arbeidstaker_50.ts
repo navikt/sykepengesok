@@ -9,7 +9,7 @@ describe('Tester arbeidstakersøknad - gradert 50%', () => {
     })
 
     it('Laster startside', function() {
-        cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader om sykepenger')
+        cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader')
         cy.get(`#soknader-list-til-behandling article a[href*=${soknad.id}]`).click()
     })
 

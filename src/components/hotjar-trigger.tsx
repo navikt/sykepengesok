@@ -27,6 +27,8 @@ export const typeTilTriggerMapping = (soknadstype: RSSoknadstype) => {
             return 'SOKNAD_BEHANDLINGSDAGER'
         case RSSoknadstype.ANNET_ARBEIDSFORHOLD:
             return 'SOKNAD_ANNET_ARBEIDSFORHOLD'
+        case RSSoknadstype.REISETILSKUDD:
+            return 'SOKNAD_REISETILSKUDD'
     }
 }
 

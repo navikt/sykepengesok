@@ -15,7 +15,7 @@ import {
     hentIkon,
     hentIkonHover, hentTeaserStatustekst,
     periodeListevisning,
-    SykepengesoknadTeaserProps
+    SykepengesoknadTeaserProps, teaserTittel
 } from './teaser-util'
 
 const FremtidigeSoknaderTeaser = ({ soknad }: SykepengesoknadTeaserProps) => {
@@ -38,9 +38,7 @@ const FremtidigeSoknaderTeaser = ({ soknad }: SykepengesoknadTeaserProps) => {
                                 </Undertekst>
                             </Vis>
                             <Undertittel tag="h3" className="inngangspanel__tittel">
-                                {soknad.soknadstype === RSSoknadstype.OPPHOLD_UTLAND
-                                    ? tekst('soknad.utland.teaser.tittel')
-                                    : tekst('soknad.teaser.tittel')}
+                                {teaserTittel(soknad)}
                             </Undertittel>
                             {periodeListevisning(soknad)}
                         </div>

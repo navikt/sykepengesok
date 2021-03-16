@@ -17,7 +17,9 @@ const SykmeldingDato = () => {
             <UndertekstBold tag="h3" className="avsnitt-hode">
                 {tekst('sykepengesoknad.sykmelding-utdrag.dato-sykmeldingen-ble-skrevet')}
             </UndertekstBold>
-            <Normaltekst>{dayjs(valgtSykmelding.bekreftelse.utstedelsesdato).format('D. MMM YYYY')}</Normaltekst>
+            <Normaltekst>
+                {dayjs(valgtSykmelding.bekreftelse.utstedelsesdato).format('D. MMM YYYY')}
+            </Normaltekst>
         </div>
     )
 }

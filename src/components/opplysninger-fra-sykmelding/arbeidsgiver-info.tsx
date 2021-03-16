@@ -17,9 +17,7 @@ const ArbeidsgiverInfo = () => {
             </div>
         )
     }
-
     return null
 }
-
 
 export default ArbeidsgiverInfo

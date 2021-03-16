@@ -23,7 +23,6 @@ const StatusPanel = () => {
     const { id } = useParams<RouteParams>()
     const [ gjenapner, setGjenapner ] = useState<boolean>(false)
 
-
     useEffect(() => {
         if (!valgtSoknad) {
             const filtrertSoknad = soknader.find(soknad => soknad.id === id)
@@ -51,7 +50,6 @@ const StatusPanel = () => {
                 headers: { 'Content-Type': 'application/json' }
             })
 
-
             try {
                 const httpCode = res.status
                 if (redirectTilLoginHvis401(res)) {
@@ -75,14 +73,11 @@ const StatusPanel = () => {
         }
     }
 
-
     return (
         <div className={'statuspanel'}>
             <div className={'content'}>
                 <div className="avsnitt">
-                    <UndertekstBold tag="h3" className="avsnitt-hode">
-                        {tekst('statuspanel.status')}
-                    </UndertekstBold>
+                    <UndertekstBold tag="h3" className="avsnitt-hode">{tekst('statuspanel.status')}</UndertekstBold>
                     <Normaltekst>{tekst('sykepengesoknad.status.AVBRUTT')}</Normaltekst>
                 </div>
                 <div className="avsnitt">

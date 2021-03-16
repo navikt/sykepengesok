@@ -12,7 +12,7 @@ describe('Tester feilsituasjoner ', () => {
         })
 
         it('Laster startside og åpner søknad', function() {
-            cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader om sykepenger')
+            cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader')
             cy.get(`#soknader-list-til-behandling article a[href*=${soknadSomTriggerSporsmalFinnesIkkeISoknad.id}]`).click()
         })
 
@@ -29,7 +29,7 @@ describe('Tester feilsituasjoner ', () => {
             cy.contains('Ooops! Her har det skjedd noe rart. Du må laste inn siden på nytt for å fortsette')
 
             cy.contains('Last inn siden på nytt').click()
-            cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader om sykepenger')
+            cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader')
         })
     })
 
@@ -57,7 +57,7 @@ describe('Tester feilsituasjoner ', () => {
             cy.contains('Ooops! Her har det skjedd noe rart. Du må laste inn siden på nytt for å fortsette')
 
             cy.contains('Last inn siden på nytt').click()
-            cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader om sykepenger')
+            cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader')
         })
     })
 

@@ -16,7 +16,7 @@ const articleTilSoknad = (articles: any) => {
 describe('Tester sortering av søknader', () => {
     it('Laster startside', function() {
         cy.visit('http://localhost:8080')
-        cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader om sykepenger')
+        cy.get('.typo-sidetittel').should('be.visible').and('have.text', 'Søknader')
     })
 
     it('Sorter etter Status', function() {
