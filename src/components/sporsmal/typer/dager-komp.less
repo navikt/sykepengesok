@@ -1,0 +1,97 @@
+@import '../../../../node_modules/nav-frontend-core/less/_variabler';
+@import '../../../basic';
+
+@dagbredde: 40px;
+
+.skjema__dager {
+    margin-top: 1.5rem;
+
+    .kalender__tittel {
+        text-align: center;
+        width: 320px;
+        margin: 2rem 0 1rem;
+    }
+
+    .kalender__hjelp {
+        text-align: center;
+        width: 320px;
+        margin: 1.5rem 0 2rem;
+    }
+
+    .ukedager {
+        width: 320px;
+        font-size: 0.9rem;
+        font-style: italic;
+
+        span {
+            display: inline-block;
+            text-align: center;
+            padding: 0.9rem 0 1rem;
+            min-width: @dagbredde;
+        }
+    }
+
+    .tomdag {
+        min-width: @dagbredde;
+    }
+
+    .kalenderuke {
+        display: flex;
+        align-items: center;
+    }
+
+    .ukenr {
+        display: inline-block;
+        text-align: center;
+        width: @dagbredde;
+        font-size: 0.9rem;
+        font-style: italic;
+        padding: 0.9rem 0;
+        border-right: 1px solid @navGra40;
+    }
+
+    .kalenderdag {
+        display: inline-block;
+        font-weight: 600;
+        width: @dagbredde;
+
+        label {
+            &:hover {
+                background-color: @navLysGra;
+                cursor: pointer;
+            }
+        }
+
+        label, span.label {
+            display: inline-block;
+            min-width: @dagbredde;
+            padding: 0.9rem 0;
+            text-align: center;
+            color: @navMorkGra;
+            border-right: 1px solid @white;
+            border-bottom: 1px solid @white;
+        }
+
+        &.sun {
+            label, span.label {
+                color: @redError;
+            }
+        }
+
+        &.foran, &.etter {
+            background-color: @navLysGra;
+
+            label, span.label {
+                color: @navGra60;
+                font-weight: normal;
+            }
+        }
+
+        input {
+            &:checked + label {
+                background-color: @navBla;
+                color: @white;
+            }
+        }
+    }
+}

@@ -1,5 +1,7 @@
 import dayjs from 'dayjs'
 
+import { Sporsmal } from '../types/types'
+
 export const fraInputdatoTilJSDato = (inputDato: any) => {
     const datoSplit = inputDato.split('.')
     let ar = datoSplit[2]
@@ -10,7 +12,7 @@ export const fraInputdatoTilJSDato = (inputDato: any) => {
     return new Date(s)
 }
 
-const maaneder = [ 'januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'desember' ]
+export const maaneder = [ 'januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'desember' ]
 const SKILLETEGN_PERIODE = '–'
 
 export const langtDatoFormat = (_dato: any) => {
@@ -104,4 +106,16 @@ export const sendtForMerEnn30DagerSiden = (sendtTilArbeidsgiverDato?: Date, send
         dagerSidenNav = dayjs(new Date()).diff(dayjs(sendtTilNAVDato), 'day') > 30
     }
     return dagerSidenArb && dagerSidenNav
+}
+
+export const sammeMnd = (sporsmal: Sporsmal): boolean => {
+    const firstMonth = dayjs(sporsmal.min!).month()
+    const lastMonth = dayjs(sporsmal.max!).month()
+    return firstMonth === lastMonth
+}
+
+export const sammeAar = (sporsmal: Sporsmal): boolean => {
+    const firstYear = dayjs(sporsmal.min!).year().toString()
+    const lastYear = dayjs(sporsmal.max!).year().toString()
+    return firstYear === lastYear
 }
