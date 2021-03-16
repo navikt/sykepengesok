@@ -173,7 +173,7 @@ const DagerKomp = ({ sporsmal }: SpmProps) => {
                         )
                     })}
                     <Normaltekst className="kalender__hjelp">
-                        {getLedetekst(tekst('sporsmal.egen-bil.kalender.hjelp'), {
+                        {getLedetekst(tekst('reisetilskudd.datoer.egen-bil.kalender.hjelp'), {
                             '%FRA%': sammeAar(sporsmal)
                                 ? dayjs(sporsmal.min!).format('DD. MMMM')
                                 : dayjs(sporsmal.min!).format('DD. MMMM YYYY'),
