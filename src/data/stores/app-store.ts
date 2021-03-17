@@ -9,7 +9,6 @@ export const [ AppStoreProvider, useAppStore ] = constate(() => {
     const [ sykmeldinger, setSykmeldinger ] = useState<Sykmelding[]>([])
     const [ valgtSoknad, setValgtSoknad ] = useState<Soknad>()
     const [ valgtSykmelding, setValgtSykmelding ] = useState<Sykmelding>()
-    const [ erBekreftet, setErBekreftet ] = useState<boolean>(false)
     const [ mottaker, setMottaker ] = useState<RSMottaker>()
     const [ top, setTop ] = useState<number>(0)
     const [ validCheck, setValidCheck ] = useState<boolean>()
@@ -22,7 +21,6 @@ export const [ AppStoreProvider, useAppStore ] = constate(() => {
         valgtSoknad, setValgtSoknad,
         sykmeldinger, setSykmeldinger,
         valgtSykmelding, setValgtSykmelding,
-        erBekreftet, setErBekreftet,
         mottaker, setMottaker,
         top, setTop,
         validCheck, setValidCheck,

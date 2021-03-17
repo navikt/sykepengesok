@@ -11,12 +11,11 @@ import { SpmProps } from '../sporsmal-form/sporsmal-form'
 import { hentFeilmelding } from '../sporsmal-utils'
 import UndersporsmalListe from '../undersporsmal/undersporsmal-liste'
 
-const TallInput = ({ sporsmal }: SpmProps) => {
+const TallKomp = ({ sporsmal }: SpmProps) => {
     const feilmelding = hentFeilmelding(sporsmal)
     const [ lokal, setLokal ] = useState<string>(hentSvar(sporsmal))
     const { register, setValue, errors, getValues } = useFormContext()
     const undersporsmal = useRef<HTMLDivElement>(null)
-    const { validerGrad, periode, hovedSporsmal } = validerArbeidsgrad(sporsmal)
 
     const onChange = (e: any) => {
         const value = e.target.value
@@ -25,6 +24,7 @@ const TallInput = ({ sporsmal }: SpmProps) => {
     }
 
     const valider = () => {
+        const { validerGrad, hovedSporsmal } = validerArbeidsgrad(sporsmal)
         if (![ TagTyper.JOBBET_DU_GRADERT, TagTyper.JOBBET_DU_100_PROSENT ].includes(hovedSporsmal!.tag)) {
             return true // hopp over validering dersom det ikke er spørsmål av denne typen
         }
@@ -38,10 +38,24 @@ const TallInput = ({ sporsmal }: SpmProps) => {
         return validerGrad ? validerGrad(values) : true
     }
 
+    const periodeGrad = () => {
+        if (sporsmal.tag === TagTyper.HVOR_MYE_TIMER_VERDI) {
+            const { periode } = validerArbeidsgrad(sporsmal)
+            return (
+                <Normaltekst tag="span">
+                    <p>{getLedetekst(tekst('soknad.feilmelding.MINDRE_TIMER_ENN_FORVENTET.lokal'),
+                        { '%GRAD%': periode.grad })}</p>
+                </Normaltekst>
+            )
+        }
+        return null
+    }
+
     useEffect(() => {
         setValue(sporsmal.id, hentSvar(sporsmal))
         // eslint-disable-next-line
     }, [])
+
 
     return (
         <>
@@ -86,10 +100,7 @@ const TallInput = ({ sporsmal }: SpmProps) => {
                         </Normaltekst>
                     </Vis>
                     <Vis hvis={errors[sporsmal.id]?.type === 'validate' && sporsmal.tag === TagTyper.HVOR_MYE_TIMER_VERDI}>
-                        <Normaltekst tag="span">
-                            <p>{getLedetekst(tekst('soknad.feilmelding.MINDRE_TIMER_ENN_FORVENTET.lokal'),
-                                { '%GRAD%': periode.grad })}</p>
-                        </Normaltekst>
+                        {periodeGrad()}
                     </Vis>
                 </Vis>
             </div>
@@ -103,4 +114,4 @@ const TallInput = ({ sporsmal }: SpmProps) => {
     )
 }
 
-export default TallInput
+export default TallKomp

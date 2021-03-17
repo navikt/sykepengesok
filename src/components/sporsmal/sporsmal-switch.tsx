@@ -14,7 +14,6 @@ import JaNeiRadio from './typer/ja-nei-radio'
 import Land from './typer/land'
 import Perioder from './typer/perioder'
 import RadioKomp from './typer/radio-komp'
-import TallInput from './typer/tall-input'
 import TallKomp from './typer/tall-komp'
 import UkjentSporsmal from './typer/ukjent-sporsmal'
 
@@ -50,13 +49,9 @@ const SporsmalSwitch = ({ sporsmal }: UndersporsmalProps) => {
         case RSSvartype.TIMER:
         case RSSvartype.PROSENT:
         case RSSvartype.TALL:
-            return <TallKomp sporsmal={sporsmal} />
-
-            // TODO: TallInput kommer fra reisetilskudd og bør merges med TallKomp
-
         case RSSvartype.BELOP:
         case RSSvartype.KILOMETER:
-            return <TallInput sporsmal={sporsmal} />
+            return <TallKomp sporsmal={sporsmal} />
 
         case RSSvartype.RADIO_GRUPPE:
         case RSSvartype.RADIO_GRUPPE_TIMER_PROSENT:
